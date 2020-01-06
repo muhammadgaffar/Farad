@@ -1,0 +1,63 @@
+&CONTROL
+    calculation = "bands"
+    max_seconds =  8.64000e+04
+    outdir      = "tmp"
+    prefix      = "ptti"
+    pseudo_dir  = "/home/mgaffar/.burai/.pseudopot"
+/
+
+&SYSTEM
+    a                         =  1.46680e+00
+    angle1(1)                 =  5.52635e+01
+    angle1(2)                 =  6.04845e+01
+    angle2(1)                 = -3.36901e+01
+    angle2(2)                 =  1.41340e+02
+    c                         =  2.23953e+01
+    degauss                   =  1.00000e-02
+    ecutrho                   =  5.76000e+02
+    ecutwfc                   =  5.20000e+01
+    ibrav                     = 4
+    lspinorb                  = .TRUE.
+    nat                       = 3
+    nbnd                      = 70
+    noncolin                  = .TRUE.
+    ntyp                      = 2
+    occupations               = "smearing"
+    smearing                  = "marzari-vanderbilt"
+    starting_magnetization(1) =  4.38748e-01
+    starting_magnetization(2) =  5.88643e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+&BANDS
+    lsym           = .FALSE.
+    spin_component = 1
+/
+
+K_POINTS {tpiba_b}
+7
+gG     20
+M      20
+K      20
+gG     20
+A      20
+L      20
+K      20
+
+ATOMIC_SPECIES
+Ti     47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Pt    195.07800  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+
+ATOMIC_POSITIONS {crystal}
+Ti      0.333334   0.666669   0.553477
+Ti      0.666669   0.333334   0.500000  0 0 0
+Pt      0.000000   0.000000   0.446522  0 0 0
+
+
