@@ -1,0 +1,66 @@
+&CONTROL
+    calculation  = "scf"
+    max_seconds  =  8.64000e+04
+    outdir       = "tmp"
+    prefix       = "Pt"
+    pseudo_dir   = "pseudo"
+    restart_mode = "from_scratch"
+    tprnfor      = .TRUE.
+    tstress      = .TRUE.
+/
+
+&SYSTEM
+    a                         =  5.55171e+00
+    angle1(1)                 =  5.49217e+01
+    angle1(2)                 =  1.14095e+02
+    angle2(1)                 =  6.94440e+01
+    angle2(2)                 = -1.53435e+02
+    b                         =  5.55171e+00
+    c                         =  3.02825e+01
+    cosab                     =  5.00097e-01
+    cosac                     =  5.07826e-01
+    cosbc                     =  5.07826e-01
+    degauss                   =  2.00000e-02
+    ecutrho                   =  5.76000e+02
+    ecutwfc                   =  5.20000e+01
+    ibrav                     = 14
+    lspinorb                  = .TRUE.
+    nat                       = 12
+    noncolin                  = .TRUE.
+    nosym                     = .FALSE.
+    ntyp                      = 2
+    occupations               = "smearing"
+    smearing                  = "marzari-vanderbilt"
+    starting_magnetization    =  0.00000e+00
+    starting_magnetization(1) =  5.22015e-01
+    starting_magnetization(2) =  2.44949e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-08
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {automatic}
+ 4  4  1  0 0 0
+
+ATOMIC_SPECIES
+Ti     47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Pt    195.08400  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+
+ATOMIC_POSITIONS {alat}
+Ti      1.640775   0.947180   2.617248
+Ti      2.140668   0.947180   2.617248
+Ti      2.390663   1.380072   2.617248
+Ti      2.890556   1.380071   2.617248
+Pt      2.140547   1.235686   2.236468
+Pt      2.640654   1.235686   2.236467
+Pt      2.390649   1.668763   2.236467
+Pt      2.890756   1.668763   2.236468
+Pt      1.140618   0.658451   1.801248  0 0 0
+Pt      1.640511   0.658451   1.801248  0 0 0
+Pt      1.390613   1.091343   1.801248  0 0 0
+Pt      1.890506   1.091343   1.801247  0 0 0

@@ -1,0 +1,71 @@
+&CONTROL
+    calculation  = "scf"
+    max_seconds  =  8.64000e+04
+    outdir       = "tmp"
+    prefix       = "Pt"
+    pseudo_dir   = "pseudo"
+    restart_mode = "from_scratch"
+    tprnfor      = .TRUE.
+    tstress      = .TRUE.
+/
+
+&SYSTEM
+    a                         =  5.31744e+00
+    angle1(1)                 =  1.53435e+02
+    angle1(2)                 =  8.25075e+01
+    angle1(3)                 =  9.00000e+01
+    angle1(4)                 =  1.29806e+02
+    angle2(1)                 =  0.00000e+00
+    angle2(2)                 =  9.46232e+00
+    angle2(3)                 =  1.40194e+02
+    angle2(4)                 =  0.00000e+00
+    b                         =  5.31744e+00
+    c                         =  2.74801e+01
+    cosab                     =  5.00000e-01
+    cosac                     =  5.16021e-01
+    cosbc                     =  5.16021e-01
+    degauss                   =  2.00000e-02
+    ecutrho                   =  5.76000e+02
+    ecutwfc                   =  5.20000e+01
+    ibrav                     = 14
+    lspinorb                  = .TRUE.
+    nat                       = 8
+    nbnd                      = 120
+    noncolin                  = .TRUE.
+    nosym                     = .FALSE.
+    ntyp                      = 4
+    occupations               = "smearing"
+    smearing                  = "marzari-vanderbilt"
+    starting_magnetization    =  0.00000e+00
+    starting_magnetization(1) =  4.47214e-01
+    starting_magnetization(2) =  6.13514e-01
+    starting_magnetization(3) =  3.90512e-01
+    starting_magnetization(4) =  3.90512e-01
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-08
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {automatic}
+ 4  4  1  0 0 0
+
+ATOMIC_SPECIES
+Ti2    47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Ti1    47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Pt1   195.08400  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+Pt2   195.08400  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+
+ATOMIC_POSITIONS {alat}
+Ti2     2.708290   1.274956   2.269742
+Ti1     1.458359   0.841984   2.269686
+Ti2     1.958358   0.841984   2.269686
+Ti1     2.208359   1.274996   2.269685
+Pt1     2.208360   0.697647   1.880604  0 0 0
+Pt2     1.708359   0.697647   1.880604  0 0 0
+Pt2     2.458359   1.130659   1.880604  0 0 0
+Pt1     1.958358   1.130659   1.880604  0 0 0

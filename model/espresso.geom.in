@@ -1,0 +1,33 @@
+&CONTROL
+    pseudo_dir = "/home/mgaffar/.burai/.pseudopot"
+/
+
+&SYSTEM
+    a     =  5.31744e+00
+    b     =  5.31744e+00
+    c     =  2.74801e+01
+    cosab =  5.00000e-01
+    cosac =  5.16021e-01
+    cosbc =  5.16021e-01
+    ibrav = 14
+    nat   = 8
+    ntyp  = 4
+/
+
+ATOMIC_SPECIES
+Ti2    47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Ti1    47.86700  Ti.rel-pz-spn-rrkjus_psl.1.0.0.UPF
+Pt1   195.08400  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+Pt2   195.08400  Pt.rel-pz-n-rrkjus_psl.0.1.UPF
+
+ATOMIC_POSITIONS {alat}
+Ti2     2.708290   1.274956   2.269742
+Ti1     1.458359   0.841984   2.269686
+Ti2     1.958358   0.841984   2.269686
+Ti1     2.208359   1.274996   2.269685
+Pt1     2.208360   0.697647   1.880604  0 0 0
+Pt2     1.708359   0.697647   1.880604  0 0 0
+Pt2     2.458359   1.130659   1.880604  0 0 0
+Pt1     1.958358   1.130659   1.880604  0 0 0
+
+
